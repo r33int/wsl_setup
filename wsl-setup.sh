@@ -12,7 +12,7 @@ then
 fi
 
 # Set less annoying permissions, this is just so I don't get annoying green bars when listing directories (Please don't judge me)
-echo "#Setting less annoying permissions\numask 077" >> ~/.profile
+echo "\n#Setting less annoying permissions\numask 077\n" >> ~/.profile
 
 # Setup SSH agent
 cat ./ssh-scripts >> ~/.profile
