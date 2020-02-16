@@ -39,6 +39,6 @@ sudo apt clean all
 ## Debian specific stuff ends here
 
 # Delete this script
-rm ~/wsl-setup
+rm -f ~/wsl-setup
 
 exit 0
