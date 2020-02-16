@@ -32,10 +32,13 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt install curl ansible vim openssh-client git -y
 
-# Clean up
+# Repo clean up
 sudo apt autoremove --purge -y
 sudo apt clean all
 
 ## Debian specific stuff ends here
+
+# Delete this script
+rm ~/wsl-setup
 
 exit 0
