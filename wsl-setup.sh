@@ -30,7 +30,7 @@ cp gitconfig ~/.gitconfig
 # Install ansible packages, for Debian like environments
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install curl ansible vim openssh-client git -y
+sudo apt install curl ansible vim openssh-client git man-db gcc -y
 
 # Repo clean up
 sudo apt autoremove --purge -y
