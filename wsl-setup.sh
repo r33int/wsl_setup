@@ -14,6 +14,9 @@ fi
 # Set less annoying permissions, this is just so I don't get annoying green bars when listing directories (Please don't judge me)
 echo "\n#Setting less annoying permissions\numask 077\n" >> ~/.profile
 
+# Set up passwordless sudo
+echo "echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >> /etc/sudoers" | sudo bash
+
 # Setup SSH agent
 cat ./ssh-scripts >> ~/.profile
 
