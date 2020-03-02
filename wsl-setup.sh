@@ -17,6 +17,9 @@ echo "\n#Setting less annoying permissions\numask 077\n" >> ~/.profile
 # Set up passwordless sudo
 echo "echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >> /etc/sudoers" | sudo bash
 
+# Let SSH not bother me everytime I connect to a new host, which happens a lot.
+sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/g"
+
 # Setup SSH agent
 cat ./ssh-scripts >> ~/.profile
 
