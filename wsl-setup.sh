@@ -17,9 +17,6 @@ echo "\n#Setting less annoying permissions\numask 077\n" >> ~/.profile
 # Set up passwordless sudo
 echo "echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >> /etc/sudoers" | sudo bash
 
-# Let SSH not bother me everytime I connect to a new host, which happens a lot.
-sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/g"
-
 # Setup SSH agent
 cat ./ssh-scripts >> ~/.profile
 
@@ -37,6 +34,9 @@ cp gitconfig ~/.gitconfig
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install curl ansible vim openssh-client git man-db gcc -y
+
+# Let SSH not bother me everytime I connect to a new host, which happens a lot.
+sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/g"
 
 # Repo clean up
 sudo apt autoremove --purge -y
