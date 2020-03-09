@@ -1,5 +1,6 @@
 // To view the default settings, hold "alt" while clicking on the "Settings" button.
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
+
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
@@ -10,6 +11,7 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles
+            "fontFace": "Cascadia Code"
         },
         "list":
         [
@@ -17,8 +19,8 @@
                 "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
                 "hidden": false,
                 "name": "Debian",
-                "startingDirectory": "\\\\wsl$\\Debian\\home\\r",
-                "source": "Windows.Terminal.Wsl"
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "\\\\wsl$\\Debian\\home\\r"
             },
             {
                 // Make changes here to the powershell.exe profile
@@ -50,6 +52,6 @@
     // To unbind a default keybinding, set the command to "unbound"
     "keybindings":
     [
-        { "command": "newTab", "keys": ["ctrl+shift+t"]}
+        { "command": "newTab", "keys": ["ctrl+t"]}
     ]
 }
