@@ -35,14 +35,14 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt install curl ansible vim openssh-client git man-db -y
 
-# Let SSH not bother me everytime I connect to a new host, which happens a lot.
-sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/g"
-
 # Repo clean up
 sudo apt autoremove --purge -y
 sudo apt clean all
 
 ## Debian specific stuff ends here
+
+# Let SSH not bother me everytime I connect to a new host, which happens a lot.
+sudo sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/g" /etc/ssh/ssh_config
 
 # Delete this script
 rm -rf ~/wsl-setup
