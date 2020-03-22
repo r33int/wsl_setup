@@ -11,10 +11,10 @@ then
 fi
 
 # Setup SSH agent, umask, aliases and prompt
-echo "\n#Setting less annoying permissions\numask 077\n" >> ~/.bashrc
+echo "\n#Setting less annoying permissions\numask 077\n" >> ~/.profile
 cat ./ssh-scripts >> ~/.profile
 cat ./aliases >> ~/.profile
-cat ./prompt.bash >> ~/.profile
+cat ./prompt.bash >> ~/.bashrc
 
 # Import settings for git and vim
 cp vimrc ~/.vimrc
