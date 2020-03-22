@@ -11,7 +11,7 @@ then
 fi
 
 # Setup SSH agent, umask, aliases and prompt
-echo "\n#Setting less annoying permissions\numask 077\n" >> ~/.profile
+echo "\n#Setting less annoying permissions\numask 077\n" >> ~/.bashrc
 cat ./ssh-scripts >> ~/.profile
 cat ./aliases >> ~/.profile
 cat ./prompt.bash >> ~/.profile
