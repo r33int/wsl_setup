@@ -34,6 +34,5 @@ sudo apt clean all
 sudo sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/g" /etc/ssh/ssh_config
 # Passwordless sudo
 echo "echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >> /etc/sudoers" | sudo bash
-# Delete this script
-rm -rf ~/wsl-setup
+
 exit 0
