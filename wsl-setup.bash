@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ -z $1]; then
+    echo "Please supply Windows Username"
+    exit 0
+fi
+
 WIN_USERNAME=$1
 
 # Get SSH keys from Windows environment
