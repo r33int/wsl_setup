@@ -1,7 +1,7 @@
 #!/bin/bash
 WIN_USERNAME=$1
 
-# Get SSH keys from Windows environment 
+# Get SSH keys from Windows environment
 umask 077
 if [ ! -d ~/.ssh ]
 then
@@ -30,8 +30,9 @@ sudo apt autoremove --purge -y
 sudo apt clean all
 ## Debian specific stuff ends here
 
-# Let SSH not bother me everytime I connect to a new host, which happens a lot.
+# Making changes to SSH client config, after it is installed
 sudo sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/g" /etc/ssh/ssh_config
+sudo sed -i 's/HashKnownHosts no/HashKnownHosts yes/' ssh_config
 # Passwordless sudo
 echo "echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >> /etc/sudoers" | sudo bash
 
