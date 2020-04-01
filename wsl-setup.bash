@@ -17,19 +17,23 @@ fi
 
 # Setup SSH agent, umask, aliases and prompt
 echo "umask 077" >> ~/.profile
-cat ./ssh-scripts >> ~/.profile
-cat ./aliases >> ~/.bash_aliases
-cat ./prompt.bash >> ~/.bashrc
+cat ./scripts/ssh-scripts >> ~/.profile
+cat ./scripts/bash_aliases >> ~/.bash_aliases
+cat ./scripts/custom_prompt >> ~/.bashrc
 
-# Import settings for git and vim
-cp vimrc ~/.vimrc
-cp gitconfig ~/.gitconfig
+# Import settings for git and vim, and other configs
+cp ./scripts/vimrc ~/.vimrc
+cp ./scripts/gitconfig ~/.gitconfig
+cp ./scripts/tmux.conf ~/.tmux.conf
+
+#Import executables
+cp -r ./bin/toggle ~/bin
 
 ## Debian Specific stuff
 # Install ansible packages, for Debian like environments
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install curl ansible vim openssh-client git man-db -y
+sudo apt install curl wget tmux vim openssh-client git man-db -y
 # Repo clean up
 sudo apt autoremove --purge -y
 sudo apt clean all
