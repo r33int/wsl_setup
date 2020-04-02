@@ -1,6 +1,7 @@
 # WSL1 setup
 
-This script is intended for personal use only, but if you want to tweak it for personal use read along.
+This script is intended for my personal use only, but if you want to tweak it for *your* 
+personal use read along.
 
 Go through wsl_setup.sh file in this repo, it is like the main() function of this setup program.
 
