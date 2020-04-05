@@ -17,7 +17,7 @@ fi
 
 # Setup SSH agent, umask, aliases and prompt
 echo "umask 077" >> ~/.profile
-cat ./scripts/ssh-scripts >> ~/.profile
+cat ./scripts/ssh_scripts >> ~/.profile
 cat ./scripts/bash_aliases >> ~/.bash_aliases
 cat ./scripts/custom_prompt >> ~/.bashrc
 
@@ -41,7 +41,7 @@ sudo apt clean all
 
 # Making changes to SSH client config, after it is installed
 sudo sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/g" /etc/ssh/ssh_config
-sudo sed -i 's/HashKnownHosts no/HashKnownHosts yes/' ssh_config
+sudo sed -i 's/HashKnownHosts yes/HashKnownHosts no/' /etc/ssh/ssh_config
 # Passwordless sudo
 echo "echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >> /etc/sudoers" | sudo bash
 
