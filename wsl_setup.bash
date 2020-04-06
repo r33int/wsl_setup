@@ -18,16 +18,6 @@ fi
 # Setup SSH agent, umask, aliases and prompt
 echo "umask 077" >> ~/.profile
 cat ./scripts/ssh_scripts >> ~/.profile
-cat ./scripts/bash_aliases >> ~/.bash_aliases
-cat ./scripts/custom_prompt >> ~/.bashrc
-
-# Import settings for git and vim, and other configs
-cp ./scripts/vimrc ~/.vimrc
-cp ./scripts/gitconfig ~/.gitconfig
-cp ./scripts/tmux.conf ~/.tmux.conf
-
-#Import executables
-cp -r ./bin/toggle ~/bin
 
 ## Debian Specific stuff
 # Install ansible packages, for Debian like environments
