@@ -7,7 +7,6 @@ fi
 WIN_USERNAME=$1
 
 # Get SSH keys from Windows environment
-umask 077
 if [ ! -d ~/.ssh ]
 then
   cp -r /mnt/c/Users/$WIN_USERNAME/.ssh ~/
@@ -15,8 +14,7 @@ then
   chmod 400 ~/.ssh/id*
 fi
 
-# Setup SSH agent, umask, aliases and prompt
-echo "umask 077" >> ~/.profile
+# Setup SSH agent, aliases and prompt
 cat ./scripts/ssh_scripts >> ~/.profile
 
 ## Debian Specific stuff
